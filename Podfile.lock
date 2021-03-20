@@ -1,0 +1,26 @@
+PODS:
+  - Realm (10.7.2):
+    - Realm/Headers (= 10.7.2)
+  - Realm/Headers (10.7.2)
+  - RealmSwift (10.7.2):
+    - Realm (= 10.7.2)
+  - ResearchKit (2.0.0)
+
+DEPENDENCIES:
+  - RealmSwift
+  - ResearchKit (~> 2.0)
+
+SPEC REPOS:
+  trunk:
+    - Realm
+    - RealmSwift
+    - ResearchKit
+
+SPEC CHECKSUMS:
+  Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
+  RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
+  ResearchKit: 06020ff370f830138b5efd10bd3606acc4de49d6
+
+PODFILE CHECKSUM: 4f29c1430acbeb8bffaf51dd2fe1de56ce4d6aac
+
+COCOAPODS: 1.10.1
