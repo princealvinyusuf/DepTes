@@ -13,8 +13,9 @@ class EvaluationModel: Object {
     @objc dynamic var diagnosis: String = ""
     @objc dynamic var diagnosisText: String = ""
     @objc dynamic var explanationText: String = ""
-    @objc dynamic var suicidalText: String = ""
+    @objc dynamic var suicidalText: String?
     @objc dynamic var score: String = ""
+    @objc dynamic var colorICon: String = ""
     
     @objc dynamic var dateCreated: Date?
     

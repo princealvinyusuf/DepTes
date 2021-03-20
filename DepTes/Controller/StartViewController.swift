@@ -12,7 +12,7 @@ import RealmSwift
 class StartViewController: UIViewController {
     @IBOutlet weak var childStartView: UIView!
     @IBOutlet weak var tableView: UITableView!
-
+    
     let realm = try! Realm()
     var itemResult: Results<EvaluationModel>?
     
@@ -28,6 +28,7 @@ class StartViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = 250
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         
         
     }
@@ -66,6 +67,8 @@ class StartViewController: UIViewController {
     }
 }
 
+
+//  MARK: - RESEARCHKIT
 
 extension StartViewController: ORKTaskViewControllerDelegate {
     
@@ -108,12 +111,37 @@ extension StartViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! EvaluationCell
-//        cell.textLabel?.text = itemResult![indexPath.row].score
+        
+        if let item = itemResult?[indexPath.row] {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            
+            let dateString = dateFormatter.string(from: item.dateCreated!)
+            cell.dateLabel.text = dateString
+            cell.diagnosis.text = item.diagnosis
+            
+            switch item.colorICon {
+            case "green":
+                cell.greenDepression.alpha = 1
+            case "lightGreen":
+                cell.lightGreenDepression.alpha = 1
+            case "yellow":
+                cell.yellowDepression.alpha = 1
+            case "orange":
+                cell.orangeDepression.alpha = 1
+            case "red":
+                cell.redDepression.alpha = 1
+            default:
+                return cell
+            }
+            
+            
+        }
         
         return cell
         
     }
-
+    
     
     
 }

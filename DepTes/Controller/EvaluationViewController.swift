@@ -41,8 +41,25 @@ class EvaluationViewController: UIViewController {
         newEvaluation.diagnosisText = viewModel!.diagnosisText
         newEvaluation.explanationText = viewModel!.explanationText
         newEvaluation.score = viewModel!.score
-        newEvaluation.suicidalText = (viewModel?.suicidalText)!
+        newEvaluation.suicidalText = viewModel?.suicidalText
         newEvaluation.dateCreated = Date()
+        
+        if let safeScore = viewModel?.score {
+            switch Int(safeScore)! {
+                case 1...4:
+                    newEvaluation.colorICon = "green"
+                case 5...9:
+                    newEvaluation.colorICon = "lightGreen"
+                case 10...14:
+                    newEvaluation.colorICon = "yellow"
+                case 15...19:
+                    newEvaluation.colorICon = "orange"
+                case 20...27:
+                    newEvaluation.colorICon = "red"
+                default:
+                    break
+            }
+        }
         
         self.save(evaluation: newEvaluation)
     }

@@ -32,7 +32,7 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emotional Experience" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqj-u4-zAs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depression Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqj-u4-zAs">
                                 <rect key="frame" x="12" y="63.5" width="359" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
@@ -53,17 +53,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-ID-Nig">
                                 <rect key="frame" x="12" y="84.5" width="353" height="105"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redDepression" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-KB-dUZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="77" height="105"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redDepression" translatesAutoresizingMaskIntoConstraints="NO" id="WZs-KB-dUZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="105"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeDepression" translatesAutoresizingMaskIntoConstraints="NO" id="ToF-Qn-0Eo">
-                                        <rect key="frame" x="92" y="0.0" width="77" height="105"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeDepression" translatesAutoresizingMaskIntoConstraints="NO" id="ToF-Qn-0Eo">
+                                        <rect key="frame" x="73.5" y="0.0" width="58.5" height="105"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowDepression" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-Jc-qk0">
-                                        <rect key="frame" x="184" y="0.0" width="77" height="105"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowDepression" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-Jc-qk0">
+                                        <rect key="frame" x="147" y="0.0" width="59" height="105"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDepression" translatesAutoresizingMaskIntoConstraints="NO" id="S5o-4i-g5F">
-                                        <rect key="frame" x="276" y="0.0" width="77" height="105"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightGreenDepression" translatesAutoresizingMaskIntoConstraints="NO" id="SEh-C2-Wi0">
+                                        <rect key="frame" x="221" y="0.0" width="58.5" height="105"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDepression" translatesAutoresizingMaskIntoConstraints="NO" id="S5o-4i-g5F">
+                                        <rect key="frame" x="294.5" y="0.0" width="58.5" height="105"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -107,7 +110,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="yvD-tW-ks2" id="bCp-uF-IeL"/>
+                <outlet property="diagnosis" destination="mrY-my-lPM" id="keu-bE-roT"/>
                 <outlet property="greenDepression" destination="S5o-4i-g5F" id="Vjr-yu-FyU"/>
+                <outlet property="lightGreenDepression" destination="SEh-C2-Wi0" id="4il-aS-1co"/>
                 <outlet property="orangeDepression" destination="ToF-Qn-0Eo" id="wLF-dV-eRA"/>
                 <outlet property="redDepression" destination="WZs-KB-dUZ" id="cck-7p-e9J"/>
                 <outlet property="yellowDepression" destination="MxJ-Jc-qk0" id="IhQ-Wz-5aR"/>
@@ -117,6 +122,7 @@
     </objects>
     <resources>
         <image name="greenDepression" width="500" height="500"/>
+        <image name="lightGreenDepression" width="500" height="500"/>
         <image name="orangeDepression" width="500" height="500"/>
         <image name="redDepression" width="500" height="500"/>
         <image name="yellowDepression" width="500" height="500"/>
