@@ -14,6 +14,8 @@
 		9F04A43525FF88CD000A6712 /* ORKTextChoiceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F04A43425FF88CD000A6712 /* ORKTextChoiceExtensions.swift */; };
 		9F04A43825FF8EDF000A6712 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F04A43725FF8EDF000A6712 /* Settings.swift */; };
 		9F04A43B25FF932A000A6712 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F04A43A25FF932A000A6712 /* Evaluation.swift */; };
+		9F17006F2605D55400BA857E /* EvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17006D2605D55400BA857E /* EvaluationCell.swift */; };
+		9F1700702605D55400BA857E /* EvaluationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F17006E2605D55400BA857E /* EvaluationCell.xib */; };
 		9F2EFD6426057571005A5EF5 /* EvaluationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EFD6326057571005A5EF5 /* EvaluationModel.swift */; };
 		9F2EFD6826059222005A5EF5 /* ChildStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EFD6726059222005A5EF5 /* ChildStartViewController.swift */; };
 		9F73D9B82600DBC100AA1F25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F73D9BA2600DBC100AA1F25 /* Localizable.strings */; };
@@ -41,6 +43,8 @@
 		9F04A43425FF88CD000A6712 /* ORKTextChoiceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORKTextChoiceExtensions.swift; sourceTree = "<group>"; };
 		9F04A43725FF8EDF000A6712 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9F04A43A25FF932A000A6712 /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
+		9F17006D2605D55400BA857E /* EvaluationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCell.swift; sourceTree = "<group>"; };
+		9F17006E2605D55400BA857E /* EvaluationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluationCell.xib; sourceTree = "<group>"; };
 		9F2EFD6326057571005A5EF5 /* EvaluationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationModel.swift; sourceTree = "<group>"; };
 		9F2EFD6726059222005A5EF5 /* ChildStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildStartViewController.swift; sourceTree = "<group>"; };
 		9F73D9B92600DBC100AA1F25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				9FF216262600B2EC00F0E80B /* ExplanationCell.swift */,
 				9FF216292600BEA600F0E80B /* AnswerCell.swift */,
 				9FF2162C2600C02000F0E80B /* ScoreCell.swift */,
+				9F17006D2605D55400BA857E /* EvaluationCell.swift */,
+				9F17006E2605D55400BA857E /* EvaluationCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1700702605D55400BA857E /* EvaluationCell.xib in Resources */,
 				9F73D9B82600DBC100AA1F25 /* Localizable.strings in Resources */,
 				9F8860AC25FCE2E800018D1E /* LaunchScreen.storyboard in Resources */,
 				9F8860A925FCE2E800018D1E /* Assets.xcassets in Resources */,
@@ -282,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F04A43B25FF932A000A6712 /* Evaluation.swift in Sources */,
+				9F17006F2605D55400BA857E /* EvaluationCell.swift in Sources */,
 				9F04A43225FF58D3000A6712 /* QuestionIdentifier.swift in Sources */,
 				9F04A42F25FF5728000A6712 /* Question.swift in Sources */,
 				9FF216242600AC5D00F0E80B /* EvaluationDetailsViewController.swift in Sources */,

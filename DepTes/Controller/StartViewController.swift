@@ -21,19 +21,26 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
+        loadEvaluation()
+        
+        tableView.register(UINib(nibName: "EvaluationCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 250
+        tableView.separatorStyle = .none
         
-        loadEvaluation()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         if !realm.isEmpty {
             childStartView.isHidden = true
             tableView.reloadData()
+            loadEvaluation()
         } else {
             tableView.isHidden = true
         }
+        
     }
     
     @IBAction func startTestPressed(_ sender: UIBarButtonItem) {
@@ -100,12 +107,13 @@ extension StartViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellMain", for: indexPath)
-        cell.textLabel?.text = itemResult![indexPath.row].score
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! EvaluationCell
+//        cell.textLabel?.text = itemResult![indexPath.row].score
         
         return cell
         
     }
+
     
     
 }
